@@ -139,7 +139,7 @@ jobs:
        - name: Upload SGSI to SourceForge...
          if: steps.var.outputs.upload_sourceforge == 'true'
          run: |
-           cd SGSI-build-tool-11/11${{ steps.var.outputs.pack_sgsi }} ./SGSI/*
+           cd SGSI-build-tool-11/11 ./SGSI/*
            ls ./SGSI/*
            expect -c " 
            spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net
