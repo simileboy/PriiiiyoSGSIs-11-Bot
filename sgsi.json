@@ -7,9 +7,9 @@
   "light_fix": true,
   "bug_fix": true,
   "version": "11",
-  "upload_sourceforge": true,
+  "upload_sourceforge": false,
   "upload_transfer": true,
-  "upload_release": true,
-  "use_7zip": false,
-  "use_zip": true
+  "upload_release": false,
+  "use_7zip": true,
+  "use_zip": false
 }
