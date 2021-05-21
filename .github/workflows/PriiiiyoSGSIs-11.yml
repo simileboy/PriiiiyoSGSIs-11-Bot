@@ -139,23 +139,21 @@ jobs:
        - name: Upload SGSI to SourceForge...
          if: steps.var.outputs.upload_sourceforge == 'true'
          run: |
-             cd $GITHUB_WORKSPACE/SGSI-build-tool/output
-             pwd
-             ls "$REPACK_NAME"
-             zip a $REPACK_NAME.zip
-             expect -c " 
-             spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net
-             expect \"Password\"        
-             send \"${{ secrets.SFPASS }}\r\"
-             expect \"sftp> \"
-             send \"cd ${{ secrets.SFDIR }}\r\"
-             set timeout -1
-             send \"put $REPACK_NAME.zip\r\"
-             expect \"Uploading\"
-             expect \"100%\"
-             expect \"sftp>\"
-             send \"bye\r\"
-             interact"
+           cd SGSI-build-tool-11/11${{ steps.var.outputs.pack_sgsi }} ./SGSI/*
+           ls ./SGSI/*
+           expect -c " 
+           spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net
+           expect \"Password\"        
+           send \"${{ secrets.SFPASS }}\r\"
+           expect \"sftp> \"
+           send \"cd ${{ secrets.SFDIR }}\r\"
+           set timeout -1
+           send \"put SGSI-build-tool-11/11${{ steps.var.outputs.pack_sgsi\r\"
+           expect \"Uploading\"
+           expect \"100%\"
+           expect \"sftp>\"
+           send \"bye\r\"
+           interact"
            
        - name: Uploading SGSI to Release
          if: steps.var.outputs.upload_release == 'true'
