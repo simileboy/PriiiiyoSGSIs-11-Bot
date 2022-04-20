@@ -1,9 +1,9 @@
 {
-  "rom_url": "https://www.priiiyocloud.workers.dev/0://MMX_2.2.0_ginkgo_21.5.20_v12-11_23000_9_20210520.zip",
+  "rom_url": "https://dl3.smartisan.com/ota/mol.darwin-ard11-rom-8.5.0-SEKSA.darwin-user/202112291350/8.5.1-202112291222-user-drw-e3ff9b8cf6.zip",
   "rom_name": "update.zip",
   "pack_sgsi": "SGSI.zip",
   "make_type": "AB",
-  "rom_type": "miui",
+  "rom_type": "smartisanos",
   "light_fix": true,
   "bug_fix": true,
   "version": "11",
