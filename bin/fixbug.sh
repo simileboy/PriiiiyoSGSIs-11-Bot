@@ -52,4 +52,10 @@ if [[ $fix = "color" ]];then
 else
  echo "" > /dev/null 2>&1
 fi
-
+if [[ $fix = "smartisan" ]];then
+./smartisan.sh
+ echo "类型：smartisan，修复完成"
+ cd ../
+else
+ echo "" > /dev/null 2>&1
+fi
